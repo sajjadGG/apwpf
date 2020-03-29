@@ -20,9 +20,25 @@ namespace WpfApp1
     /// </summary>
     public partial class InputForm : Page
     {
+        
         public InputForm()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)(sender);
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
+
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow.inputform = this;
+            tabctr.SelectedIndex = 1;
+            this.NavigationService.Navigate(MainWindow.home);
         }
     }
 }

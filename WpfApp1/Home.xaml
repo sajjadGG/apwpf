@@ -27,13 +27,18 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images/background.jpg"/>
         </Grid.Background>
-        <Label Grid.Row="0" Grid.Column="2">Welcome Back</Label>
-        <Button Grid.Row="1" Grid.Column="0">Save</Button>
-        <Button Grid.Row="1" Grid.Column="1">Load</Button>
-        <Button Grid.Row="1" Grid.Column="2">R</Button>
-        <Button Grid.Row="2" Grid.ColumnSpan="3">New</Button>
-        <Label Grid.Row="3" Grid.Column="0">Please select your option</Label>
-        <ListBox Grid.Column="0" Grid.Row="4">
+        <TabControl Name="tabctr" Grid.Column="0" Grid.Row="0" SelectionChanged="TabControl_SelectionChanged" TabStripPlacement="Top" Background="Transparent">
+            <TabItem Header="Home" />
+            <TabItem Header="Form"/>
+        </TabControl>
+
+        <TextBlock Grid.Row="0" Grid.Column="2">Welcome Back</TextBlock>
+        <Button Grid.Row="1" Grid.Column="0" Background="Transparent">Save</Button>
+        <Button Grid.Row="1" Grid.Column="1" Background="Transparent">Load</Button>
+        <Button Grid.Row="1" Grid.Column="2" Background="Transparent">R</Button>
+        <Button Grid.Row="2" Grid.ColumnSpan="3" Background="Transparent">New</Button>
+        <TextBlock Grid.Row="3" Grid.Column="0">Please select your option</TextBlock>
+        <ListBox Grid.Column="0" Grid.Row="4" Background="Transparent">
             <CheckBox HorizontalAlignment="Left">
                 item1
             </CheckBox>
@@ -45,7 +50,7 @@
             </CheckBox>
         </ListBox>
 
-        <ListBox Grid.Column="1" Grid.Row="4">
+        <ListBox Grid.Column="1" Grid.Row="4" Background="Transparent">
             <CheckBox HorizontalAlignment="Left">
                 item1
             </CheckBox>
@@ -58,18 +63,20 @@
         </ListBox>
 
 
-        <ComboBox Name="citiesListBox" Grid.Column="2"  Grid.Row="4">
-            <ComboBoxItem>Tehran</ComboBoxItem>
+        <ComboBox Name="citiesListBox" Grid.Column="2"  Grid.Row="4" Text="selcect your city" Background="Transparent">
+            <ComboBoxItem IsSelected="True">Tehran</ComboBoxItem>
             <ComboBoxItem>Shiraz</ComboBoxItem>
             <ComboBoxItem>Esfehan</ComboBoxItem>
             <ComboBoxItem>Mashhad</ComboBoxItem>
         </ComboBox>
-        <Label Grid.ColumnSpan="2" Grid.Row="5">
+        <TextBlock Grid.ColumnSpan="2" Grid.Row="5">
             If there is any explanation feel free to provide us with it in text box below 
-        </Label>
-        <TextBox Grid.ColumnSpan="3" Grid.Row="6" Text="Further information" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible">
+        </TextBlock>
+        <TextBox Grid.ColumnSpan="3" Grid.Row="6" Background="Transparent" GotFocus="TextBox_GotFocus" Text="Further information" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible">
         </TextBox>
-        <Button Grid.Column="1" Grid.Row="7" Width="100" Height="auto" HorizontalAlignment="Center">Next Page</Button>
+        <Button Grid.Column="1" Grid.Row="7" Background="Transparent" Click="Button_Click" Width="100" Height="auto" HorizontalAlignment="Center">
+            Next Page
+        </Button>
         
     </Grid>
 </Page>

@@ -20,8 +20,13 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : NavigationWindow
     {
+        public static Home home;
+        public static InputForm inputform;
+
         public MainWindow()
         {
+            home = new Home();
+            inputform = new InputForm();
             InitializeComponent();
         }
     }

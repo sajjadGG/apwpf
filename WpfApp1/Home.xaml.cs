@@ -24,5 +24,26 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.home = this;
+            this.NavigationService.Navigate(MainWindow.inputform);
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MainWindow.home = this;
+            tabctr.SelectedIndex = 0;
+            this.NavigationService.Navigate(MainWindow.inputform);
+        }
+
     }
 }
