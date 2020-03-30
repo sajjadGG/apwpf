@@ -12,22 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MahApps.Metro.Controls;
 namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class MainWindow : MetroWindow
     {
-        public static Home home;
-        public static InputForm inputform;
+        public static TabControl tbcstatic;
 
         public MainWindow()
         {
-            home = new Home();
-            inputform = new InputForm();
             InitializeComponent();
+            tbcstatic = tbc;
         }
     }
 }

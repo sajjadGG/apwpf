@@ -18,7 +18,7 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for InputForm.xaml
     /// </summary>
-    public partial class InputForm : Page
+    public partial class InputForm : UserControl
     {
         
         public InputForm()
@@ -34,11 +34,6 @@ namespace WpfApp1
         }
 
 
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            MainWindow.inputform = this;
-            tabctr.SelectedIndex = 1;
-            this.NavigationService.Navigate(MainWindow.home);
-        }
+        
     }
 }
