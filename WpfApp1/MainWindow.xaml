@@ -9,8 +9,8 @@
         mc:Ignorable="d"
         Title="Home" Height="500" Width="500"
         >
-    <TabControl Name="tbc">
-        <TabItem Header="Home">
+    <TabControl Name="tbc" SelectionChanged="Tbc_SelectionChanged">
+        <TabItem Header="Home" Name="homeTab">
             <Grid>
                 <local:Home/>
             </Grid>
@@ -19,6 +19,9 @@
             <Grid>
                 <local:InputForm/>
             </Grid>
+        </TabItem>
+        <TabItem Header="Black" Name="blackItem">
+            
         </TabItem>
     </TabControl>
     

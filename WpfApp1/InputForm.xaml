@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       xmlns:local="clr-namespace:WpfApp1"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="500"
@@ -21,19 +22,19 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
-       
-     
+
+
+
         <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" >Please fill this form</TextBlock>
-        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">First Name : </Label>
-        <TextBox Grid.Row="1" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Text="please enter your first name" BorderThickness="1"></TextBox>
-        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Last Name:</Label>
-        <TextBox Grid.Row="2" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Text="please enter your last name" BorderThickness="1"></TextBox>
+        <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">First Name :</Label>
+        <TextBox Controls:TextBoxHelper.Watermark="please enter your first name" Controls:TextBoxHelper.ClearTextButton="True" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" BorderThickness="1" Margin="0.4,77,0,6.4" Grid.RowSpan="2"/>
+        <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" >Last Name:</Label>
+        <TextBox Grid.Row="2" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="please enter your last name" BorderThickness="1"></TextBox>
         <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">Age:</Label>
-        <TextBox Grid.Row="3" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Text="please enter your age" BorderThickness="1"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="please enter your age" BorderThickness="1"></TextBox>
         <Label Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center">Equations:</Label>
-        <TextBox Grid.Row="4" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Text="please enter your equations" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="1" GotFocus="TextBox_GotFocus" HorizontalAlignment="Left" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="please enter your equations" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></TextBox>
         <Image Grid.Row="5" Grid.ColumnSpan="2"  Source="Images/thumbsUp.jpg" Stretch="Uniform" HorizontalAlignment="Center"/>
-        
+
     </Grid>
 </UserControl>
